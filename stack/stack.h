@@ -1,4 +1,7 @@
 #pragma once
+#include <iostream>
+#include <fstream>
+
 
 template <typename T>
 class Tstack
@@ -22,6 +25,13 @@ public:
 			throw 1;
 		
 		this->mass[this->used++] = elem;
+	}
+	void writeTop(String& filename)
+	{
+		std::ofstream file(filename);
+		file << back();
+		file.close();
+
 	}
 	T pop()//Возвращает и вырезает последний
 	{
