@@ -14,6 +14,7 @@ int main()
 	temp.push(std::string("newtest1"));
 	temp.push(std::string("newTest2"));
 	temp.push(std::string("newtest100500"));
+	temp.writeTop(std::string("stack.txt"));
 	cout << temp.pop() << " ";
 	cout << temp.pop() << " ";
 	cout << temp.pop() << " ";
