@@ -21,28 +21,28 @@ public:
 	}
 	void push(const T& elem)
 	{
-		if (this->used == this->all) // Íå ïåðåïîëíåí ëè ñòåê?
+		if (this->used == this->all) // ÃÃ¥ Ã¯Ã¥Ã°Ã¥Ã¯Ã®Ã«Ã­Ã¥Ã­ Ã«Ã¨ Ã±Ã²Ã¥Ãª?
 			throw 1;
 		
 		this->mass[this->used++] = elem;
 	}
-	void writeTop(String& filename)
+	void writeTop(std::string& filename)
 	{
 		std::ofstream file(filename);
 		file << back();
 		file.close();
 
 	}
-	T pop()//Âîçâðàùàåò è âûðåçàåò ïîñëåäíèé
+	T pop()//Ã‚Ã®Ã§Ã¢Ã°Ã Ã¹Ã Ã¥Ã² Ã¨ Ã¢Ã»Ã°Ã¥Ã§Ã Ã¥Ã² Ã¯Ã®Ã±Ã«Ã¥Ã¤Ã­Ã¨Ã©
 	{
-		if (this->used == 0) // Íå ïåðåïîëíåí ëè ñòåê?
+		if (this->used == 0) // ÃÃ¥ Ã¯Ã¥Ã°Ã¥Ã¯Ã®Ã«Ã­Ã¥Ã­ Ã«Ã¨ Ã±Ã²Ã¥Ãª?
 			throw 2;
 
 		return this->mass[--this->used];
 	}
 	T back()
 	{
-		if (this->used == 0) // Íå ïåðåïîëíåí ëè ñòåê?
+		if (this->used == 0) // ÃÃ¥ Ã¯Ã¥Ã°Ã¥Ã¯Ã®Ã«Ã­Ã¥Ã­ Ã«Ã¨ Ã±Ã²Ã¥Ãª?
 			throw 2;
 
 		return this->mass[this->used-1];
